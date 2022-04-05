@@ -1,0 +1,78 @@
+﻿Lokasi Linux diKomputer saya, terdeteksi dengan mengakses “cat /proc/cmdline”, hasilnya :
+
+BOOT_IMAGE=/boot/vmlinuz-5.8.0-43-generic root=UUID=626ade73-e1cc-436c-bbfa-805a967bd7e7 ro quiet splash vt.handoff=7
+
+File-file yang terdapat dalam linuk dan kegunaannya :
+
+Direktory Linux
+    • /bin : Mencakup semua program executable biner yang diperlukan selama booting, memperbaiki, file yang dibutuhkan untuk menjalankan single-user-mode, dan perintah dasar lainnya yaitu,  cat, du, df, tar, rpm, wc, history, dll.  
+    • /boot : Menyimpan file-file penting selama proses boot-up, termasuk Kernel Linux.  
+    • /dev : Berisi file device untuk semua perangkat keras pada mesin misalnya, cdrom, cpu, dll  
+    • /etc : Berisi file konfigurasi aplikasi, startup, shutdown, start, stop skrip untuk setiap program individu.  
+    • /home : direktori Home dari user. Setiap kali user baru dibuat, sebuah direktori dengan nama user dibuat dalam direktori home yang berisi direktori lain seperti Desktop, Download, Dokumen, dll.  
+    • /lib : Direktori Lib berisi modul kernel dan library yang diperlukan untuk boot sistem dan menjalankan perintah dalam file system root.  
+    • /lost+found : Direktori ini dipasang selama instalasi Linux, berguna untuk memulihkan file yang dapat rusak karena hal tak terduga yang dapat mengakibatkan shut-down.  
+    • /media : direktori mount sementara dibuat untuk perangkat removable seperti media / cdrom.  
+    • /mnt : Direktori mount untuk mounting sistem file sementara.  
+    • /opt : Optional disingkat sebagai opt. Berisi perangkat lunak aplikasi pihak ketiga. Yaitu, lampp, dll.  
+    • /proc : Sebuah file-sistem virtual dan pseudo yang berisi informasi tentang proses yang berjalan dengan proses-id tertentu alias pid.  
+    • /root: ini adalah direktori home dari user root dan jangan bingung dengan ‘/‘.  
+    • /run : File yang berisi tentang system yang valid sampai system melakukan boot selanjutnya.  
+    • /sbin : Berisi program biner yang diperlukan oleh System Administrator, untuk pemeliharaan. Yaitu, iptables, fdisk, ifconfig, swapon, reboot, dll. 
+    • /srv : Service disingkat sebagai ‘srv’. Direktori ini berisi server tertentu dan layanan file terkait.  
+    • /sys : distribusi Linux modern memasukkan sebuah direktori /sys sebagai filesystem virtual, yang menyimpan dan memungkinkan modifikasi dari perangkat yang terhubung ke sistem.  
+    • /tmp : Direktori sementara sistem, diakses oleh pengguna dan root. Menyimpan file-file sementara untuk pengguna dan sistem, sampai boot berikutnya.  
+    • /usr : Mengandung binari executable, dokumentasi, kode sumber, library untuk program tingkat kedua.  
+    • /var : Singkatan dari variabel. Direktori ini berisi log, lock, dsb. 
+
+File Penting pada linuk :
+    • /boot/vmlinuz : File Kernel Linux. 
+    • /dev/hda : File device untuk IDE HDD (Hard Disk Drive) yang pertama. 
+    • /dev/hdc : File device untuk IDE Cdrom. 
+    • /dev/null : Sebuah perangkat semu, yang tidak ada apa – apa. Kadang keluaran sampah diarahkan ke /dev/null, sehingga akan hilang selamanya. 
+    • /etc/bashrc : Mengandung default sistem dan alias digunakan oleh shell bash. 
+    • /etc/crontab : Sebuah script shell untuk menjalankan perintah tertentu pada interval waktu yang telah ditetapkan. 
+    • /etc/exports : Informasi dari sistem file yang tersedia pada jaringan. 
+    • /etc/fstab : Informasi Disk Drive dan mount point nya. 
+    • /etc/group : Informasi security group. 
+    • /etc/grub.conf : file konfigurasi grub bootloader. 
+    • /etc/init.d : Layanan Script startup. 
+    • /etc/lilo.conf : file konfigurasi bootloader lilo. 
+    • /etc/hosts : Informasi alamat Ip dan nama host yang sesuai. 
+    • /etc/hosts.allow : Daftar host yang diperbolehkan untuk mengakses layanan pada mesin lokal. 
+    • /etc/host.deny : Daftar host yang ditolak untuk mengakses layanan pada mesin lokal. 
+    • /etc/inittab : proses INIT dan interaksinya di berbagai tingkat run. 
+    • /etc/issue : Memungkinkan untuk mengedit pesan pra-login. 
+    • /etc/modules.conf : file konfigurasi untuk modul sistem. 
+    • /etc/motd : Tempat motd untuk Pesan Of The Day, pesan yang didapat para pengguna setelah login. 
+    • /etc/passwd : Mengandung password pengguna sistem dalam file shadow, implementasi keamanan.  
+    • /etc/printcap : Informasi printer. 
+    • /etc/profile : default shell Bash. 
+    • /etc/profile.d : Aplikasi skrip, dieksekusi setelah login. 
+    • /etc/rc.d : Informasi tentang script khusus tingkat run. 
+    • /etc/rc.d/init.d : Script instalasi tingkat run. 
+    • /etc/resolv.conf : Domain Name Servers (DNS) biasa digunakan oleh system. 
+    • /etc/securetty : List terminal, dimana root login. 
+    • /etc/skel : Script yang Mempopulasikan direktori home user baru. 
+    • /etc/termcap : Sebuah file ASCII yang mendefinisikan perilaku Terminal, konsol dan printer. 
+    • /etc/X11 : file Konfigurasi sistem X-Windows. 
+    • /usr/bin : Pperintah eksekusi user normal. 
+    • /usr/bin/X11 : Binari sistem X-Windows. 
+    • /usr/include : Berisi file yang digunakan oleh program ‘c’. 
+    • /usr/share : Direktori file bersama, Info file, dll. 
+    • /usr/lib : File library yang dibutuhkan selama kompilasi Program. 
+    • /usr/sbin : Perintah untuk Super User, untuk administrator system. 
+    • /proc/cpuinfo : Informasi CPU. 
+    • /proc/filesystems : Informasi file system yang digunakan saat ini. 
+    • /proc/interrupts : Informasi tentang interupsi saat sedang digunakan saat ini. 
+    • /proc/ioports : Berisi semua alamat Input / Output yang digunakan oleh perangkat pada server. 
+    • /proc/meminfo : Informasi penggunaan memori. 
+    • /proc/modules : Saat menggunakan modul kernel. 
+    • /proc/mount : Informasi file system yang di-mount. 
+    • /proc/Stat : Statistik Detil Sistem saat ini. 
+    • /proc/swaps : Informasi file swap. 
+    • /version : Informasi versi linux. 
+    • /var/log/lastlog : log proses boot terakhir. 
+    • /var/log/messages : log pesan yang dihasilkan oleh daemon syslog pada boot. 
+    • /var/log/wtmp : Daftar waktu login dan durasi setiap pengguna pada sistem saat ini. 
+

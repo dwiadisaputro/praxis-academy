@@ -1,0 +1,95 @@
+﻿Perintah di Groub99
+
+1. Listing files (ls) : melihat directories / file yang terdapat di komputer
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls
+Adi      Documents  Music     Public  Templates  Videos
+Desktop  Downloads  Pictures  snap    test
+
+
+
+
+ditemukan ada 11 directories
+
+2. Listing Hidden Files (ls -a) : melihat directory atau file yang tersembunyi
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls -a
+.              .cache     .local    Public                     Videos
+..             .config    .mozilla  snap                       .vscode
+Adi            Desktop    Music     .ssh
+.bash_history  Documents  Pictures  .sudo_as_admin_successful
+.bash_logout   Downloads  .pki      Templates
+.bashrc        .gnupg     .profile  test
+terlihat semua directory/ file yang tersembunyi ataupun yang tidak tersembunyi.
+3. menampilkan semua directory secara terperinci (ls -al)
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls -al
+total 100
+drwxr-xr-x 21 blk  blk  4096 Apr  5 10:40 .
+drwxr-xr-x  3 root root 4096 Apr  4 20:38 ..
+drwxrwxr-x  3 blk  blk  4096 Apr  5 09:31 Adi
+-rw-------  1 blk  blk   816 Apr  4 17:20 .bash_history
+-rw-r--r--  1 blk  blk   220 Apr  4 20:38 .bash_logout
+-rw-r--r--  1 blk  blk  3771 Apr  4 20:38 .bashrc
+drwx------ 14 blk  blk  4096 Apr  4 15:35 .cache
+drwx------ 16 blk  blk  4096 Apr  5 09:32 .config
+drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Desktop
+drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Documents
+drwxr-xr-x  2 blk  blk  4096 Apr  4 15:01 Downloads
+drwx------  3 blk  blk  4096 Apr  4 15:18 .gnupg
+drwxr-xr-x  3 blk  blk  4096 Apr  5 04:02 .local
+drwx------  5 blk  blk  4096 Apr  5 04:06 .mozilla
+drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Music
+drwxr-xr-x  2 blk  blk  4096 Apr  5 10:18 Pictures
+drwx------  3 blk  blk  4096 Apr  4 15:18 .pki
+-rw-r--r--  1 blk  blk   807 Apr  4 20:38 .profile
+drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Public
+drwxr-xr-x  3 blk  blk  4096 Apr  4 15:07 snap
+drwx------  2 blk  blk  4096 Apr  4 15:18 .ssh
+-rw-r--r--  1 blk  blk     0 Apr  4 15:11 .sudo_as_admin_successful
+drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Templates
+drwxrwxr-x  2 blk  blk  4096 Apr  4 15:19 test
+drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Videos
+drwxrwxr-x  3 blk  blk  4096 Apr  4 15:18 .vscode
+4. Creating & Viewing Files (Membuat & Melihat File)
+       “cat > filename” untuk menambah file
+       “blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ cat > tugas”
+       
+       5. Delete File (menghapus file)
+       “rm filename”
+       blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls
+Adi      Documents  latihan  Pictures  snap       test   Videos
+Desktop  Downloads  Music    Public    Templates  tugas
+
+
+sebelum dihapus, untuk mengetahui hasilnya setelah dimakukkan “rm filename”, yang akan dihapus adalah “file tugas” maka measukkan “rm tugas” hasilnya :
+
+
+file “tugas” sudah terhapus.
+6. membuat directory baru
+“mkdir directoryname”
+=> blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ mkdir latihan
+7. Renaming Directory (mv)
+“blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ mv latihan latihan1”
+8. Removing Directories (rmdir)
+“blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ rmdir latihan1”
+9. The History Command (history)
+menampilkan semua hasil perintah di terminal pada linuk
+“blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ history”
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. The clear command (clear)
+perintah ini membersihkan kekacauan di terminal
+“blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ clear”
+
+
+Perintah di E-guide-PDF
+
