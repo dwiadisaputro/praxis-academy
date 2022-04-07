@@ -1,20 +1,21 @@
- Create a folder for your project.
-mkdir rhymes
-cd rhymes
+# Buat directory baru, dapat menggunakan :
+mkdir Adi (namefile
+# untuk masuk ke direktory, menggunakan :
+cd Adi (namefile)
 
-# To make this directory and empty Git repo do this:
+# Untuk membuat direktory dan mengosongkan direktory repo git, menggunakan:
 git init 
 
-# I usually create an empty README.txt file for the first commit in my project
+# Membuat file README.txt kosong dengan first commit pada project.
 # history. 
 touch README.txt 
 git add README.txt 
 git commit -m 'First commit.' 
 
-# Add some explanation about the project to the README file.
+# Tambahkan beberapa penjelasan tentang project ke file README.
 echo 'This repo is a collection of my favorite nursery rhymes.' >> README.txt
 
-# Review uncommitted changes. Then commit them.
+# Tinjau perubahan yang terjadi, kemudian commit semua.
 git status
 git diff
 git add README.txt

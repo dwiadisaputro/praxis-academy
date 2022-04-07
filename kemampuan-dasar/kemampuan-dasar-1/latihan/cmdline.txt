@@ -4,11 +4,8 @@
 blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls
 Adi      Documents  Music     Public  Templates  Videos
 Desktop  Downloads  Pictures  snap    test
-
-
-
-
 ditemukan ada 11 directories
+
 
 2. Listing Hidden Files (ls -a) : melihat directory atau file yang tersembunyi
 blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls -a
@@ -19,6 +16,7 @@ Adi            Desktop    Music     .ssh
 .bash_logout   Downloads  .pki      Templates
 .bashrc        .gnupg     .profile  test
 terlihat semua directory/ file yang tersembunyi ataupun yang tidak tersembunyi.
+
 3. menampilkan semua directory secara terperinci (ls -al)
 blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ ls -al
 total 100
@@ -48,6 +46,7 @@ drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Templates
 drwxrwxr-x  2 blk  blk  4096 Apr  4 15:19 test
 drwxr-xr-x  2 blk  blk  4096 Apr  5 04:02 Videos
 drwxrwxr-x  3 blk  blk  4096 Apr  4 15:18 .vscode
+
 4. Creating & Viewing Files (Membuat & Melihat File)
        “cat > filename” untuk menambah file
        “blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ cat > tugas”
@@ -58,16 +57,16 @@ drwxrwxr-x  3 blk  blk  4096 Apr  4 15:18 .vscode
 Adi      Documents  latihan  Pictures  snap       test   Videos
 Desktop  Downloads  Music    Public    Templates  tugas
 
-
-sebelum dihapus, untuk mengetahui hasilnya setelah dimakukkan “rm filename”, yang akan dihapus adalah “file tugas” maka measukkan “rm tugas” hasilnya :
-
-
+5. sebelum dihapus, untuk mengetahui hasilnya setelah dimakukkan “rm filename”, yang akan dihapus adalah “file tugas” maka measukkan “rm tugas” hasilnya :
 file “tugas” sudah terhapus.
+
 6. membuat directory baru
 “mkdir directoryname”
 => blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ mkdir latihan
+
 7. Renaming Directory (mv)
 “blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ mv latihan latihan1”
+
 8. Removing Directories (rmdir)
 “blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ rmdir latihan1”
 9. The History Command (history)
