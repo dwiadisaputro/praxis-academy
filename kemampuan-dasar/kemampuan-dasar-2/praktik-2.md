@@ -48,4 +48,36 @@ Memulai Pull Request, ada 2 langkah yang dijalankan :
 1. Fork & Pull 
  - klik "Fork"
  - klik "Code" pilih yg HTTPS
- - 
+ -
+ 
+ 2. Clone
+  - buka organization teman
+  - pilih organizationnya
+  - klik repositorynya
+  - salin codenya
+  - masuk ke terminal => masukkan script
+  $ git clone [code urlnya]
+  
+ 3. branch baru
+  - masuk ke terminal dan isikam secara bertahap
+  $ git checkout -b [namabranchbaru]
+  $ git add .
+  $ git commit -m "first commit"
+  $ git branch => lihat mana yang aktif
+  $ git checkout (isikan dg nama branch yg aktif)
+  $ git remote -v
+  (akan keluar url dari fetch dan push)
+  $ git fetch [url fetch]
+  $ git push [url push]
+  
+  4. pull reques dengan teman
+   a. dari directori clone orang lain
+    - lakukan perubahan di dalam direktorinya (clone)
+    - setelah melakukan perubahan, langsung lakukan "push"
+    $ git add .
+    $ git commit -m "catatan"
+    $ git push -u origin (branchnya)
+   
+   b. pemilik data, melakukan "pull"
+   dengan memasukkan script
+   $ git pull origin (branchnya)
