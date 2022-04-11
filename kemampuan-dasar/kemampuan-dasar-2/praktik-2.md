@@ -1,5 +1,5 @@
 # Team Collaboration with GitHub
-	Team colaboration ini maksudnya yaitu bekerja secara team untuk menghasilkan suatu proyek, salah satunya menggunakan Github untuk berkolaborasi menyelesaikan proyek secara bersamaan.
+ Team colaboration ini maksudnya yaitu bekerja secara team untuk menghasilkan suatu proyek, salah satunya menggunakan Github untuk berkolaborasi menyelesaikan proyek secara bersamaan.
 **Langkah-langkah yang sering dipakai**
 1. Menambahkan Anggota Tim
 2. Permintaan tarik
@@ -81,3 +81,8 @@ Memulai Pull Request, ada 2 langkah yang dijalankan :
    b. pemilik data, melakukan "pull"
    dengan memasukkan script
    $ git pull origin (branchnya)
+  5. Analytics
+   a. graphs
+      Graphs ini menyediakan analisis rinci seperti :
+      Contributor, Commit Activity, Code Frequency, Punchcard.
+   b. network
