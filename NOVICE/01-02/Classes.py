@@ -191,41 +191,41 @@
 
 
 #--#
-class MyClass:
-    """A simple example class"""
-    i = 12345
+# class MyClass:
+#     """A simple example class"""
+#     i = 12345
     
-    def f(self):
-        return 'hello world'
+#     def f(self):
+#         return 'hello world'
 
-def __init__(self):
-    self.data = []
+# def __init__(self):
+#     self.data = []
 
-class Complex:
-    def __init__(self, realpart, imagpart):
-        self.r = realpart
-        self.i = imagpart
-x = Complex(3.0, -4.5)
-x.r, x.i
-x.counter = 1
-while x.counter < 10:
-    x.counter = x.counter * 2
-print(x.counter)
-del x.counter
+# class Complex:
+#     def __init__(self, realpart, imagpart):
+#         self.r = realpart
+#         self.i = imagpart
+# x = Complex(3.0, -4.5)
+# x.r, x.i
+# x.counter = 1
+# while x.counter < 10:
+#     x.counter = x.counter * 2
+# print(x.counter)
+# del x.counter
 
 
-#---#
-class Dog:
-    kind = 'canine'     # class variable shared by all instances
-    def __init__(self, name):
-        self.name = name # instance variable unique to each instance
+# #---#
+# class Dog:
+#     kind = 'canine'     # class variable shared by all instances
+#     def __init__(self, name):
+#         self.name = name # instance variable unique to each instance
 
-d = Dog('Fido')
-e = Dog('Buddy')
-print(d.kind) # shared by all dogs
-print('e.kind')
-print(d.name)
-print(e.name)
+# d = Dog('Fido')
+# e = Dog('Buddy')
+# print(d.kind) # shared by all dogs
+# print('e.kind')
+# print(d.name)
+# print(e.name)
 
 
 # #--#
@@ -246,30 +246,30 @@ print(e.name)
 
 
 # ##--##
-# class Reverse:
-#     """Iterator for looping over a sequence backwards."""
-#     def __init__(self, data):
-#         self.data = data
-#         self.index = len(data)
+class Reverse:
+    """Iterator for looping over a sequence backwards."""
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)
     
-#     def __iter__(self):
-#         return self
+    def __iter__(self):
+        return self
     
-#     def __next__(self):
-#         if self.index == 0:
-#             raise StopIteration
-#         self.index = self.index - 1
-#         return self.data[self.index]
-# rev = Reverse('spam')
-# iter(rev)
-# for char in rev:
-#     print(char)
+    def __next__(self):
+        if self.index == 0:
+            raise StopIteration
+        self.index = self.index - 1
+        return self.data[self.index]
+rev = Reverse('spam')
+iter(rev)
+for char in rev:
+    print(char)
 
-# def reverse(data):
-#     for index in range(len(data)-1, -1, -1):
-#         yield data[index]
-# for char in reverse('golf'):
-#     print(char)
+def reverse(data):
+    for index in range(len(data)-1, -1, -1):
+        yield data[index]
+for char in reverse('golf'):
+    print(char)
 
 # print(sum(i*i for i in range(10))) 
 # syafak = [10, 20, 30]
