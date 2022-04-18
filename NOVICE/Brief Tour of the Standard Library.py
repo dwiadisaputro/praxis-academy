@@ -25,3 +25,20 @@
 from string import Template
 t = Template('${village}folk send $$10 to $cause')
 print(t.substitute(village='Nottingham', cause='the ditch fund'))
+t = Template('Mengembalikan $item ke $pusat.')
+d = dict(item='data tanpa muatan')
+# print(t.substitute(d))
+print(t.safe_substitute(d))
+
+import time, os.path
+photofiles = ['Ashly.jpg']
+class BatchRename(Template):
+    delimiter = '%'
+print(fmt = input('Enter rename sty (%d-date %n-seqnum %f-format): '))
+
+t = BatchRename(fmt)
+date = time.strftime('%d%b%y')
+for i, filename in enumerate(photofiles):
+    base, ext = os.path.splitext(filename)
+    newname = t.substitute(d=date, n=i, f=ext)
+    print('{0} --> {1}'.format(filename, newname))
