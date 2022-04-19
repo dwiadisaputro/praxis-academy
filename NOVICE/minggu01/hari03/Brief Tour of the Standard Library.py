@@ -134,26 +134,33 @@ print("Handling", d.popleft())
 #         # unsearched.append(m)
 #         print(unsearched.append(m))
 
-import bisect
-scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]
-bisect.insort(scores, (300, 'ruby'))
-print(scores)
+# import bisect
+# scores = [(100, 'perl'), (200, 'tcl'), (400, 'lua'), (500, 'python')]
+# bisect.insort(scores, (300, 'ruby'))
+# print(scores)
 
-from heapq import heapify, heappop, heappush
-data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]
-heapify(data)
-heappush(data, -5)
-print([heappop(data) for i in range(3)])
+# from heapq import heapify, heappop, heappush
+# data = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0]
+# heapify(data)
+# heappush(data, -5)
+# print([heappop(data) for i in range(3)])
 
 
 ####--- Decimal Floating Point Arithmetic
 from decimal import *
-print(round(Decimal('0.70') * Decimal('1.05'), 2))
-print(round(.70 * 1.05, 2))
-print(Decimal('1.00') % Decimal('.10'))
+a = round(Decimal('0.70') * Decimal('1.05'), 2)
+print('Decimal', (a))
+# print(round(Decimal('0.70') * Decimal('1.05'), 2))
+# print(round(.70 * 1.05, 2))
+b = round(Decimal('0.70') * Decimal('1.05'), 2)
+print('Syafak', (b))
+# print(Decimal('1.00') % Decimal('.10'))
+c = Decimal('1.00') % Decimal('.10')
+print('Decimal', (c))
 print(1.00 % 0.10)
 print(sum([Decimal('0.1')]*10) == Decimal('1.0'))
 print(sum([0.1]*10) == 1.0)
 
 getcontext().prec = 36
-print(Decimal(1) / Decimal(7))
+d = Decimal(1) / Decimal(7)
+print('Decimal', (d))
