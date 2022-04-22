@@ -124,20 +124,46 @@
 
 # OK (skipped=1)
 
-import unittest
-from my_sum import sum
-from fraction import Fraction
+# import unittest
+# from my_sum import sum
+# from fraction import Fraction
 
-class TestSum(unittest.TestCase):
-    def test_list_int(self):
-        """ Test that it can sum a list of integers """
-        data = [1, 2, 3]
-        result = sum(data)
-        self.assertEqual(result, 6)
+# class TestSum(unittest.TestCase):
+#     def test_list_int(self):
+#         """ Test that it can sum a list of integers """
+#         data = [1, 2, 3]
+#         result = sum(data)
+#         self.assertEqual(result, 6)
     
-    def test_list_fraction(self): """ Test that it can sum a list of fractions """
-    data = [Fraction(1,4), fraction(2, 5)]
-    result = sum(data)
+#     def test_list_fraction(self): """ Test that it can sum a list of fractions """
+#     data = [Fraction(1,4), fraction(2, 5)]
+#     result = sum(data)
+#     self.assertEqual(result, 1)
+# if __name__ == '__main__':
+#     unittest.main()
+##jika dijalankan di terminal akan : python3 -m unittest coba(sesuai nama filenya)
+"""
+FF
+======================================================================
+FAIL: test_list_fraction (coba.TestSum)
+Test that it can sum a list of fraction
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/blk/Adi/NOVICE/minggu02/hari02/project/coba.py", line 20, in test_list_fraction
     self.assertEqual(result, 1)
-if __name__ == '__main__':
-    unittest.main()
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_list_int (coba.TestSum)
+Test that it can sum a list of integers
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/blk/Adi/NOVICE/minggu02/hari02/project/coba.py", line 12, in test_list_int
+    self.assertEqual(result, 6)
+AssertionError: None != 6
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=2)
+"""
