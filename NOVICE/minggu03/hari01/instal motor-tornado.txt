@@ -1,0 +1,16 @@
+menginstal "motor-tornado"
+buka terminal dan masukkan script "pip install tornado moto"
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi$ pip install tornado motor
+Collecting tornado
+  Downloading tornado-6.1-cp38-cp38-manylinux2010_x86_64.whl (427 kB)
+     |████████████████████████████████| 427 kB 356 kB/s 
+Collecting motor
+  Downloading motor-2.5.1-py3-none-any.whl (55 kB)
+     |████████████████████████████████| 55 kB 930 kB/s 
+Collecting pymongo<4,>=3.12
+  Downloading pymongo-3.12.3-cp38-cp38-manylinux2014_x86_64.whl (546 kB)
+     |████████████████████████████████| 546 kB 1.2 MB/s 
+Installing collected packages: tornado, pymongo, motor
+Successfully installed motor-2.5.1 pymongo-3.12.3 tornado-6.1
+

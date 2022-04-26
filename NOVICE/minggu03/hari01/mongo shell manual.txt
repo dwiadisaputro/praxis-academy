@@ -1,0 +1,29 @@
+ketikkan pada terminal "mongo"
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi$ mongo
+
+akan tampil :
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("9c83dc4e-bf86-4202-93a1-e501bc1ded8b") }
+MongoDB server version: 3.6.8
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+Server has startup warnings: 
+2022-04-26T09:04:39.060+0700 I STORAGE  [initandlisten] 
+2022-04-26T09:04:39.060+0700 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2022-04-26T09:04:39.060+0700 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2022-04-26T09:04:39.836+0700 I CONTROL  [initandlisten] 
+2022-04-26T09:04:39.836+0700 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2022-04-26T09:04:39.836+0700 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2022-04-26T09:04:39.836+0700 I CONTROL  [initandlisten] 
+> 
+
+dapat menjalankan mongoshell dengan string koneksi yang menentukan host dan port dan opsi koneksi lainnya. Misalnya, berikut ini termasuk tls
+opsi "tls" mulai tersedia dari "MongoDB 4.2", versi sebelumnya, gunakan "ssl"
+hasilnya :
+> mongo "mongodb://mongodb0.example.com:27017/testdb?ssl=true"
+2022-04-26T12:00:44.100+0700 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:6

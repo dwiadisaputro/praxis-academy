@@ -268,3 +268,24 @@ Uptime:                 2 hours 7 min 6 sec
 
 Threads: 7  Questions: 74  Slow queries: 0  Opens: 33  Flush tables: 1  Open tables: 26  Queries per second avg: 0.009
 
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi$ sudo mysql
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 46
+Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1 Ubuntu 20.04
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.008 sec)
+
+MariaDB [(none)]> exit
+Bye
