@@ -1,0 +1,270 @@
+cek terlebih dahulu, ada update atau tidak. Dengan masukkan "sudo apt update" pada terminal
+jika ada update maka tampilannya seperti ini :
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt update
+[sudo] password for blk: 
+Hit:1 http://packages.microsoft.com/repos/code stable InRelease
+Hit:2 http://id.archive.ubuntu.com/ubuntu focal InRelease          
+Get:3 http://id.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:5 http://id.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://id.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1.745 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,6 kB]
+Get:8 http://id.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [277 kB]
+Get:9 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,3 kB]
+Get:10 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [918 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2.464 B]
+Get:12 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [390 kB]
+Get:13 http://id.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Get:14 http://id.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7.980 B]
+Get:15 http://id.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,8 kB]
+Fetched 3.816 kB in 5s (833 kB/s)                                  
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+28 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+
+
+jika sudah seleai ==> langsung masukkan "sudo apt install mariadb-server"
+maka akan tampil seperti ini :
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt install mariadb-server
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libfwupdplugin1 libllvm11 libnvidia-cfg1-460
+  libnvidia-common-460 libnvidia-compute-460 libnvidia-decode-460
+  libnvidia-encode-460 libnvidia-extra-460 libnvidia-fbc1-460
+  libnvidia-gl-460 libnvidia-ifr1-460 nvidia-compute-utils-460
+  nvidia-kernel-common-460 nvidia-kernel-source-460
+  nvidia-utils-460 shim xserver-xorg-video-nvidia-460
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  galera-3 gawk libaio1 libconfig-inifiles-perl libdbd-mysql-perl
+  libhtml-template-perl libreadline5 libsigsegv2
+  mariadb-client-10.3 mariadb-client-core-10.3 mariadb-common
+  mariadb-server-10.3 mariadb-server-core-10.3 socat
+Suggested packages:
+  gawk-doc libipc-sharedcache-perl mailx mariadb-test tinyca
+The following NEW packages will be installed:
+  galera-3 gawk libaio1 libconfig-inifiles-perl libdbd-mysql-perl
+  libhtml-template-perl libreadline5 libsigsegv2
+  mariadb-client-10.3 mariadb-client-core-10.3 mariadb-common
+  mariadb-server mariadb-server-10.3 mariadb-server-core-10.3
+  socat
+0 upgraded, 15 newly installed, 0 to remove and 28 not upgraded.
+Need to get 19,2 MB of archives.
+After this operation, 164 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://id.archive.ubuntu.com/ubuntu focal/main amd64 libsigsegv2 amd64 2.12-2 [13,9 kB]
+Get:2 http://id.archive.ubuntu.com/ubuntu focal/main amd64 gawk amd64 1:5.0.1+dfsg-1 [418 kB]
+Get:3 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-common all 1:10.3.34-0ubuntu0.20.04.1 [15,9 kB]
+Get:4 http://id.archive.ubuntu.com/ubuntu focal/universe amd64 galera-3 amd64 25.3.29-1 [898 kB]
+Get:5 http://id.archive.ubuntu.com/ubuntu focal/main amd64 libconfig-inifiles-perl all 3.000002-1 [40,6 kB]
+Get:6 http://id.archive.ubuntu.com/ubuntu focal/main amd64 libaio1 amd64 0.3.112-5 [7.184 B]
+Get:7 http://id.archive.ubuntu.com/ubuntu focal/main amd64 libreadline5 amd64 5.2+dfsg-3build3 [100 kB]
+Get:8 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-client-core-10.3 amd64 1:10.3.34-0ubuntu0.20.04.1 [5.853 kB]
+Get:9 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-client-10.3 amd64 1:10.3.34-0ubuntu0.20.04.1 [1.130 kB]
+Get:10 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-server-core-10.3 amd64 1:10.3.34-0ubuntu0.20.04.1 [6.026 kB]
+Get:11 http://id.archive.ubuntu.com/ubuntu focal/main amd64 socat amd64 1.7.3.3-2 [323 kB]
+Get:12 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-server-10.3 amd64 1:10.3.34-0ubuntu0.20.04.1 [4.204 kB]
+Get:13 http://id.archive.ubuntu.com/ubuntu focal/universe amd64 libdbd-mysql-perl amd64 4.050-3 [82,8 kB]
+Get:14 http://id.archive.ubuntu.com/ubuntu focal/main amd64 libhtml-template-perl all 2.97-1 [59,0 kB]
+Get:15 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 mariadb-server all 1:10.3.34-0ubuntu0.20.04.1 [12,7 kB]
+Fetched 19,2 MB in 18s (1.092 kB/s)                                
+Preconfiguring packages ...
+Selecting previously unselected package libsigsegv2:amd64.
+(Reading database ... 204002 files and directories currently installed.)
+Preparing to unpack .../libsigsegv2_2.12-2_amd64.deb ...
+Unpacking libsigsegv2:amd64 (2.12-2) ...
+Setting up libsigsegv2:amd64 (2.12-2) ...
+Selecting previously unselected package gawk.
+(Reading database ... 204009 files and directories currently installed.)
+Preparing to unpack .../0-gawk_1%3a5.0.1+dfsg-1_amd64.deb ...
+Unpacking gawk (1:5.0.1+dfsg-1) ...
+Selecting previously unselected package mariadb-common.
+Preparing to unpack .../1-mariadb-common_1%3a10.3.34-0ubuntu0.20.04.1_all.deb ...
+Unpacking mariadb-common (1:10.3.34-0ubuntu0.20.04.1) ...
+Selecting previously unselected package galera-3.
+Preparing to unpack .../2-galera-3_25.3.29-1_amd64.deb ...
+Unpacking galera-3 (25.3.29-1) ...
+Selecting previously unselected package libconfig-inifiles-perl.
+Preparing to unpack .../3-libconfig-inifiles-perl_3.000002-1_all.deb ...
+Unpacking libconfig-inifiles-perl (3.000002-1) ...
+Selecting previously unselected package libaio1:amd64.
+Preparing to unpack .../4-libaio1_0.3.112-5_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.112-5) ...
+Selecting previously unselected package libreadline5:amd64.
+Preparing to unpack .../5-libreadline5_5.2+dfsg-3build3_amd64.deb ...
+Unpacking libreadline5:amd64 (5.2+dfsg-3build3) ...
+Selecting previously unselected package mariadb-client-core-10.3.
+Preparing to unpack .../6-mariadb-client-core-10.3_1%3a10.3.34-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mariadb-client-core-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Selecting previously unselected package mariadb-client-10.3.
+Preparing to unpack .../7-mariadb-client-10.3_1%3a10.3.34-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mariadb-client-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Selecting previously unselected package mariadb-server-core-10.3.
+Preparing to unpack .../8-mariadb-server-core-10.3_1%3a10.3.34-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking mariadb-server-core-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Selecting previously unselected package socat.
+Preparing to unpack .../9-socat_1.7.3.3-2_amd64.deb ...
+Unpacking socat (1.7.3.3-2) ...
+Setting up mariadb-common (1:10.3.34-0ubuntu0.20.04.1) ...
+update-alternatives: using /etc/mysql/mariadb.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Selecting previously unselected package mariadb-server-10.3.
+(Reading database ... 204392 files and directories currently installed.)
+Preparing to unpack .../mariadb-server-10.3_1%3a10.3.34-0ubuntu0.20.04.1_amd64.deb ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Unpacking mariadb-server-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libdbd-mysql-perl:amd64.
+Preparing to unpack .../libdbd-mysql-perl_4.050-3_amd64.deb ...
+Unpacking libdbd-mysql-perl:amd64 (4.050-3) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../libhtml-template-perl_2.97-1_all.deb ...
+Unpacking libhtml-template-perl (2.97-1) ...
+Selecting previously unselected package mariadb-server.
+Preparing to unpack .../mariadb-server_1%3a10.3.34-0ubuntu0.20.04.1_all.deb ...
+Unpacking mariadb-server (1:10.3.34-0ubuntu0.20.04.1) ...
+Setting up libconfig-inifiles-perl (3.000002-1) ...
+Setting up libreadline5:amd64 (5.2+dfsg-3build3) ...
+Setting up gawk (1:5.0.1+dfsg-1) ...
+Setting up libhtml-template-perl (2.97-1) ...
+Setting up socat (1.7.3.3-2) ...
+Setting up libdbd-mysql-perl:amd64 (4.050-3) ...
+Setting up galera-3 (25.3.29-1) ...
+Setting up libaio1:amd64 (0.3.112-5) ...
+Setting up mariadb-server-core-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Setting up mariadb-client-core-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Setting up mariadb-client-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+Setting up mariadb-server-10.3 (1:10.3.34-0ubuntu0.20.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend requires a screen at least 13 lines tall and 31 columns wide.)
+debconf: falling back to frontend: Readline
+Created symlink /etc/systemd/system/mysql.service → /lib/systemd/system/mariadb.service.
+Created symlink /etc/systemd/system/mysqld.service → /lib/systemd/system/mariadb.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/mariadb.service → /lib/systemd/system/mariadb.service.
+Setting up mariadb-server (1:10.3.34-0ubuntu0.20.04.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+
+
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/NOVICE/minggu02/hari05$ sudo mysql_secure_installation
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+password for the root user.  If you've just installed MariaDB, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+root user without the proper authorisation.
+
+Set root password? [Y/n] n
+ ... skipping.
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+to log into MariaDB without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+ - Dropping test database...
+ ... Success!
+ - Removing privileges on test database...
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+
+
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/NOVICE/minggu02/hari05$ sudo mariadb
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 43
+Server version: 10.3.34-MariaDB-0ubuntu0.20.04.1 Ubuntu 20.04
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.003 sec)
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [(none)]> exit
+Bye
+
+
+Selesai..
+
+GRANT ALL ON *.* TO 'admin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+
+
+
+cek status mariadb
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/NOVICE/minggu02/hari05$ sudo systemctl status mariadb
+● mariadb.service - MariaDB 10.3.34 database server
+     Loaded: loaded (/lib/systemd/system/mariadb.service; enabled; vendor preset: >
+     Active: active (running) since Tue 2022-04-26 09:04:39 WIB; 2h 5min ago
+       Docs: man:mysqld(8)
+             https://mariadb.com/kb/en/library/systemd/
+    Process: 857 ExecStartPre=/usr/bin/install -m 755 -o mysql -g root -d /var/run>
+    Process: 886 ExecStartPre=/bin/sh -c systemctl unset-environment _WSREP_START_>
+    Process: 902 ExecStartPre=/bin/sh -c [ ! -e /usr/bin/galera_recovery ] && VAR=>
+    Process: 1076 ExecStartPost=/bin/sh -c systemctl unset-environment _WSREP_STAR>
+    Process: 1078 ExecStartPost=/etc/mysql/debian-start (code=exited, status=0/SUC>
+   Main PID: 972 (mysqld)
+     Status: "Taking your SQL requests now..."
+lines 1-12
+
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/NOVICE/minggu02/hari05$ sudo mysqladmin version
+mysqladmin  Ver 9.1 Distrib 10.3.34-MariaDB, for debian-linux-gnu on x86_64
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Server version          10.3.34-MariaDB-0ubuntu0.20.04.1
+Protocol version        10
+Connection              Localhost via UNIX socket
+UNIX socket             /var/run/mysqld/mysqld.sock
+Uptime:                 2 hours 7 min 6 sec
+
+Threads: 7  Questions: 74  Slow queries: 0  Opens: 33  Flush tables: 1  Open tables: 26  Queries per second avg: 0.009
+
