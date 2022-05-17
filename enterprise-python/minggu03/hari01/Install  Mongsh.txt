@@ -1,0 +1,31 @@
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+[sudo] password for blk: 
+OK
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt-get update
+Hit:1 http://id.archive.ubuntu.com/ubuntu focal InRelease                                                                                     
+Hit:2 http://id.archive.ubuntu.com/ubuntu focal-updates InRelease                                                                             
+Ign:3 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease                    
+Hit:4 http://id.archive.ubuntu.com/ubuntu focal-backports InRelease                                                
+Hit:5 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release                                            
+Ign:7 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 InRelease              
+Hit:8 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 Release          
+Get:10 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                  
+Hit:11 http://packages.microsoft.com/repos/code stable InRelease
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,7 kB]                                                                                                              
+Get:12 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,7 kB]                                                                                                              
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,3 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2.464 B]                                                                                                        
+Fetched 209 kB in 1min 7s (3.112 B/s)                                                                                                                                                                     
+Reading package lists... Done
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt-get install -y mongodb-mongosh
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+mongodb-mongosh is already the newest version (1.4.1).
+mongodb-mongosh set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
