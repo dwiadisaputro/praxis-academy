@@ -1,0 +1,65 @@
+CRUD merupakan kepanjangan dari Creat, Read, Update, Delete
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo service mongod start
+[sudo] password for blk: 
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ mongo
+MongoDB shell version v5.0.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("09e96309-6d9b-4b42-8fe3-1269fb45fabd") }
+MongoDB server version: 5.0.8
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-05-18T09:34:03.788+07:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+        2022-05-18T09:34:04.523+07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin    0.000GB
+config   0.000GB
+local    0.000GB
+onecode  0.000GB
+> use kelas
+switched to db kelas
+
+##untuk memasukkan/ membuat data tunggal, menggunakan "insertOne"
+> db.kelas.insertOne({ "Nama" : "Nurul", "Kelas" : "Coding"})
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6284605a57605fc622f847d8")
+}
+##untuk menampilkan data menggunakan "find"
+> db.kelas.find()
+{ "_id" : ObjectId("6284605a57605fc622f847d8"), "Nama" : "Nurul", "Kelas" : "Coding" }
+
+##untuk membuat data banyak sekaligus, menggunakan "insertMany"
+> db.kelas.insertMany([{ "Nama" : "Ahmad", "Kelas" : "Coding", "Absen" : 1 }, { "Nama" : "Faiz", "Kelas" : "Coding", "Absen" : 2 }, { "Nama" : "Hidayah", "Kelas" : "Coding", "Absen" : 3 }])
+{
+	"acknowledged" : true,
+	"insertedIds" : [
+		ObjectId("628463de57605fc622f847d9"),
+		ObjectId("628463de57605fc622f847da"),
+		ObjectId("628463de57605fc622f847db")
+	]
+}
+> db.kelas.find()
+{ "_id" : ObjectId("6284605a57605fc622f847d8"), "Nama" : "Nurul", "Kelas" : "Coding" }
+{ "_id" : ObjectId("628463de57605fc622f847d9"), "Nama" : "Ahmad", "Kelas" : "Coding", "Absen" : 1 }
+{ "_id" : ObjectId("628463de57605fc622f847da"), "Nama" : "Faiz", "Kelas" : "Coding", "Absen" : 2 }
+{ "_id" : ObjectId("628463de57605fc622f847db"), "Nama" : "Hidayah", "Kelas" : "Coding", "Absen" : 3 }

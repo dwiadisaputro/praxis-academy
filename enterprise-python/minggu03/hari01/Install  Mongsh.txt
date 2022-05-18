@@ -29,3 +29,6 @@ Reading state information... Done
 mongodb-mongosh is already the newest version (1.4.1).
 mongodb-mongosh set to manually installed.
 0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+
+
+curl --create-dirs -o $HOME/.postgresql/root.crt -O https://cockroachlabs.cloud/clusters/20e8edee-7486-42ff-a55f-5f04ae643856/cert
