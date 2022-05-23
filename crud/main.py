@@ -15,4 +15,5 @@ mycol = mydb["riwayat"]
 
 datalist = [{'nama':'samosir', 'age':27, 'alamat':'sulawesi'}, {'nama':'zaki', 'age':20, 'alamat':'jawa'}, 
             {'nama':'syafak', 'age':19, 'alamat':'rembang'}, {'nama':'ike', 'age':22, 'alamat':'pati'}]
+
 mycol.insert_many(datalist)

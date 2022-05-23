@@ -1,0 +1,166 @@
+proses install flask di linux
+
+1. sudo apt install python3-pip
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt install python3-pip
+[sudo] password for blk: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-pip is already the newest version (20.0.2-5ubuntu1.6).
+0 upgraded, 0 newly installed, 0 to remove and 28 not upgraded.
+
+2. sudo pip3 install virtualenv
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo pip3 install virtualenv
+Collecting virtualenv
+  Downloading virtualenv-20.14.1-py2.py3-none-any.whl (8.8 MB)
+     |████████████████████████████████| 8.8 MB 1.3 MB/s 
+Collecting distlib<1,>=0.3.1
+  Downloading distlib-0.3.4-py2.py3-none-any.whl (461 kB)
+     |████████████████████████████████| 461 kB 3.4 MB/s 
+Collecting filelock<4,>=3.2
+  Downloading filelock-3.7.0-py3-none-any.whl (10 kB)
+Collecting platformdirs<3,>=2
+  Downloading platformdirs-2.5.2-py3-none-any.whl (14 kB)
+Requirement already satisfied: six<2,>=1.9.0 in /usr/lib/python3/dist-packages (from virtualenv) (1.14.0)
+Installing collected packages: distlib, filelock, platformdirs, virtualenv
+Successfully installed distlib-0.3.4 filelock-3.7.0 platformdirs-2.5.2 virtualenv-20.14.1
+
+##-- Membuat Virtual Environment--#
+
+1. mkdir flask-app
+2. cd flask-app
+3. virtualenv Env
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ virtualenv env
+created virtual environment CPython3.8.10.final.0-64 in 273ms
+  creator CPython3Posix(dest=/home/blk/Adi/flask-app/env, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/blk/.local/share/virtualenv)
+    added seed packages: pip==22.0.4, setuptools==62.1.0, wheel==0.37.1
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+#-- cek--#
+=> ls -l
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ ls -l
+total 4
+drwxrwxr-x 4 blk blk 4096 Mei 20 14:25 env
+
+##-- Mengaktifkan env nya
+=> source env/bin/activate
+hasilnya :
+(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ 
+
+#--(tanda bahwa envnya sdh aktif, maka didepannya ada tanda (env))
+
+
+##-- Install Flask --##
+1. pip install flask
+
+(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ pip install flask
+Collecting flask
+  Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 KB 1.9 MB/s eta 0:00:00
+Collecting itsdangerous>=2.0
+  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Jinja2>=3.0
+  Downloading Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 KB 2.4 MB/s eta 0:00:00
+Collecting Werkzeug>=2.0
+  Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.9/224.9 KB 2.4 MB/s eta 0:00:00
+Collecting importlib-metadata>=3.6.0
+  Downloading importlib_metadata-4.11.3-py3-none-any.whl (18 kB)
+Collecting click>=8.0
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 KB 8.4 MB/s eta 0:00:00
+Collecting zipp>=0.5
+  Downloading zipp-3.8.0-py3-none-any.whl (5.4 kB)
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: zipp, Werkzeug, MarkupSafe, itsdangerous, click, Jinja2, importlib-metadata, flask
+Successfully installed Jinja2-3.1.2 MarkupSafe-2.1.1 Werkzeug-2.1.2 click-8.1.3 flask-2.1.2 importlib-metadata-4.11.3 itsdangerous-2.1.2 zipp-3.8.0
+WARNING: You are using pip version 22.0.4; however, version 22.1 is available.
+You should consider upgrading via the '/home/blk/Adi/flask-app/env/bin/python -m pip install --upgrade pip' command.
+
+
+##-- Uji Flask --##
+(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ nano run.py
+akan masuk ke GNU nya
+-->> di "Enter" kemudian isikan script berikut :
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+        return "Hello World"
+
+if __name__ == "__main__":
+        app.run(debug=True)
+
+##---kemudian panggil :
+(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ python run.py
+--->> jika tidak bermasalah, akan tampil seperti ini:
+* Serving Flask app 'run' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-401-669
+
+ #itu adalah development server#
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ ##__ sekarang bisa coba acses dengan menjalankan ip local : http://127.0.0.1:5000
+
+jika berhasil akan tampil :
+Hello World
+
+## untuk menghentikan development servernya tinggal tekan : Ctrl + c
+#-- tampil keluar dari developmentnya:
+
+#//-- sebelum tekan Ctrl+c :
+(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ python run.py
+ * Serving Flask app 'run' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-401-669
+127.0.0.1 - - [20/May/2022 14:46:42^C(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ deactivate
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ 
+
+
+
+
+
+] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2022 14:46:42] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [20/May/2022 14:46:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2022 14:47:39] "GET / HTTP/1.1" 200 -
+
+#//-- setelah tekan Ctrl+c :
+(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ python run.py
+ * Serving Flask app 'run' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-401-669
+127.0.0.1 - - [20/May/2022 14:46:42] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2022 14:46:42] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [20/May/2022 14:46:43] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/May/2022 14:47:39] "GET / HTTP/1.1" 200 -
+^C(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ 
+
+##--- Jika ingin keluar dari Environment nya, tinggal beri perintah "deactivate"
+akan tampil :
+^C(env) blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ deactivate
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi/flask-app$ 
+##--- Jika ingin masuk ke Environment nya, tinggal ketikkan perintah "source env/bin/activate"

@@ -9,36 +9,40 @@
 #         "id": 1,
 #         "nama": "ahmad"
 #     }
+
 #     return data
 
 ##-------------------------------------##
 
 ##--Routing--##
-from flask import Flask
-app = Flask(__name__)
+# from flask import Flask
+# app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return 'Index Page'
+# @app.route('/')
+# def index():
+#     return 'Index Page'
 
-@app.route('/hello')
-def hello():
-    return 'Selamat Pagi...!!'
+# @app.route('/hello')
+# def hello():
+#     return 'Selamat Pagi...!!'
 
 ##----------------------------------##
 
 ##--Variabel Rules--##
-# # from flask import Flask
+from flask import Flask
 # from markupsafe import escape
-# # app = Flask(__name__)
+app = Flask(__name__)
 
-# @app.route('/user/<username>')
-# def show_user_profile(username):
-#     return 'user %S' %escape(username)
+@app.route('/blog/<int:postID>')
+def show_blog(postID):
+    return 'Blog Number %d' % postID
 
-# @app.route('/post/<int:post_id>')
-# def show_post(post_id):
-#     return 'Post %d' %post_id
+@app.route('/rev/<float:revNo>')
+def revision(revNo):
+    return 'Revision Number %f' % revNo
+
+if __name__ == '__main__':
+    app.run()
 
 # @app.route('/path/<path:subpath>')
 # def show_subpath(subpath):
