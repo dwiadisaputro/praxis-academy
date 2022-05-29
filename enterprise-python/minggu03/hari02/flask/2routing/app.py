@@ -3,8 +3,8 @@ app = Flask(__name__)
 
 @app.route('/hello')
 def hello_world():
-   return 'hello world'
+   return 'selamat datang'
 
 def hello_world():
-    return 'hello world'
+    return 'selamat pagi kawan'
 app.add_url_rule('/', 'hello', hello_world)

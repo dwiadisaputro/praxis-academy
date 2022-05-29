@@ -12,7 +12,7 @@ def hello_anggota(anggota):
 @app.route('/user/<name>')
 def hello_user(name):
     if name =='admin':
-        return redirect(url_for('hello_adm'))
+        return redirect(url_for('hello_admin'))
     else:
         return redirect(url_for('hello_anggota', anggota = name))
     
