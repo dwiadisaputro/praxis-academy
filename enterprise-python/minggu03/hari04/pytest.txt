@@ -1,0 +1,25 @@
+install pytest
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~/Adi$ pip install pytest
+Collecting pytest
+  Downloading pytest-7.1.2-py3-none-any.whl (297 kB)
+     |████████████████████████████████| 297 kB 385 kB/s 
+Collecting iniconfig
+  Downloading iniconfig-1.1.1-py2.py3-none-any.whl (5.0 kB)
+Collecting pluggy<2.0,>=0.12
+  Downloading pluggy-1.0.0-py2.py3-none-any.whl (13 kB)
+Collecting packaging
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 505 kB/s 
+Collecting tomli>=1.0.0
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting attrs>=19.2.0
+  Downloading attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+     |████████████████████████████████| 60 kB 487 kB/s 
+Collecting py>=1.8.2
+  Downloading py-1.11.0-py2.py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 451 kB/s 
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 404 kB/s 
+Installing collected packages: iniconfig, pluggy, pyparsing, packaging, tomli, attrs, py, pytest
+Successfully installed attrs-21.4.0 iniconfig-1.1.1 packaging-21.3 pluggy-1.0.0 py-1.11.0 pyparsing-3.0.9 pytest-7.1.2 tomli-2.0.1
