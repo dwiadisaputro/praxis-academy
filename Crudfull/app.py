@@ -8,8 +8,7 @@ try:
     mongo = pymongo.MongoClient(
         host="localhost",
         port=27017,
-        serverSelectionTimeoutMS=1000
-    )
+        serverSelectionTimeoutMS=1000)
     db = mongo.company
     mongo.server_info() #triger exception if cannot connect to db
 except:
@@ -38,7 +37,7 @@ def get_some_users():
 ###--membuat data (creat)
 ##############################
 
-@app.route("/users", methods=["POST"])
+@app.route("/admin", methods=["POST"])
 def create_user():
     try:
         user = {'name': request.form["name"],
@@ -54,8 +53,7 @@ def create_user():
                  "id":f"{dbResponse.inserted_id}"
                  }),
             status=200,
-            mimetype="aplication/json"
-        )
+            mimetype="aplication/json")
     
     except Exception as ex:
         print("*******")
