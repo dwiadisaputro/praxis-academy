@@ -73,10 +73,10 @@ def update_user(id):
         print(ex)
         return Response(
             response=json.dumps({"message": "maaf data gagal diperbarui"}),
-            ststus=500, mimetype="aplication/json")
+            status=500, mimetype="aplication/json")
 
 # ########################################
-# ##--memperbarui database kegiatan--##
+# ##--menghapus data kegiatan--##
 # ########################################
 @app.route("/acara/<id>", methods=["DELETE"])
 def delete_user(id):
