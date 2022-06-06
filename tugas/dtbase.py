@@ -1,8 +1,12 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 import pymongo
 import json
 from bson.objectid import ObjectId
 app = Flask(__name__)
+
+@app.route("/")
+def route_pustaka():
+    return render_template('awal.html')
 
 ###########################
 ##--connect to database
@@ -37,8 +41,7 @@ def creat_user():
             status=200,
             mimetype="aplication/json")
     except Exception as ex:
-        print(ex)
-        print("Gagal terbuat")
+        return Response(response=json.dumps({"message":"Gagal terbuat"}), status=200, mimetype="aplication/json")
 ###########################
 ##--membaca data
 ###########################

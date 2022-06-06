@@ -21,9 +21,7 @@ except:
 @app.route("/acara", methods=["POST"])
 def create_user():
     try:
-        user = {'date': request.form["date"],
-                'time': request.form["time"],
-                'activity': request.form["activity"]}
+        user = {'kegiatan': request.form["kegiatan"]}
         dbResponse = db.acara.insert_one(user)
         print(dbResponse.inserted_id)
         return Response(
@@ -60,15 +58,15 @@ def update_user(id):
     try:
         dbResponse=db.acara.update_one(
             {"_id": ObjectId(id)},
-            {"$set":{"date": request.form["date"]}}
+            {"$set":{"kegiatan": request.form["kegiatan"]}}
         )
         if dbResponse.modified_count ==1:
             return Response(
                 response=json.dumps({"message":"data diperbarui"}),
                 status=200, mimetype="aplication/json")
-            return Response(
-                response=json.dumps({"message":"tidak ada yang diperbarui"}),
-                status=200, mimetype="aplication/json")
+        return Response(
+            response=json.dumps({"message":"tidak ada yang diperbarui"}),
+            status=200, mimetype="aplication/json")
     except Exception as ex:
         print(ex)
         return Response(
