@@ -1,0 +1,70 @@
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo systemctl status postgresql
+[sudo] password for blk: 
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor pr>
+     Active: active (exited) since Tue 2022-06-07 09:13:28 WIB; 6h ago
+    Process: 1424 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 1424 (code=exited, status=0/SUCCESS)
+
+Jun 07 09:13:28 blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx systemd[1]: Starting Po>
+Jun 07 09:13:28 blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx systemd[1]: Finished Po>
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt update
+Hit:1 http://id.archive.ubuntu.com/ubuntu focal InRelease                      
+Get:2 http://packages.microsoft.com/repos/code stable InRelease [10,4 kB]      
+Get:3 http://id.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]     
+Get:4 http://packages.microsoft.com/repos/code stable/main armhf Packages [88,4 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]      
+Get:6 http://id.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]   
+Get:7 http://packages.microsoft.com/repos/code stable/main amd64 Packages [87,7 kB]
+Get:8 http://id.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1.834 kB]
+Get:9 http://packages.microsoft.com/repos/code stable/main arm64 Packages [88,6 kB]
+Ign:10 http://repo.vivaldi.com/stable/deb stable InRelease                     
+Hit:11 http://repo.vivaldi.com/stable/deb stable Release                       
+Ign:12 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 InRelease     
+Hit:14 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 Release       
+Hit:15 http://apt.postgresql.org/pub/repos/apt focal-pgdg InRelease            
+Ign:16 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 InRelease
+Hit:18 http://repo.mongodb.com/apt/ubuntu focal/mongodb-enterprise/5.0 Release 
+Get:19 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [442 kB]
+Get:21 http://id.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [661 kB]
+Get:22 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1.491 kB]
+Get:23 http://id.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [338 kB]
+Get:24 http://id.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [278 kB]
+Get:25 http://id.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [15,4 kB]
+Get:26 http://id.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [681 kB]
+Get:27 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [926 kB]
+Get:28 http://id.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [208 kB]
+Get:29 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [390 kB]
+Get:30 http://id.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20,7 kB]
+Get:31 http://id.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:32 http://id.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [7.988 B]
+Get:33 http://id.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [13,2 kB]
+Get:34 http://id.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [23,7 kB]
+Get:35 http://id.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30,5 kB]
+Get:36 http://id.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [860 B]
+Get:37 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40,8 kB]
+Get:38 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10,4 kB]
+Get:39 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [705 kB]
+Get:40 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66,5 kB]
+Get:41 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14,5 kB]
+Get:42 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2.464 B]
+Fetched 8.812 kB in 18s (489 kB/s)                                             
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+8 packages can be upgraded. Run 'apt list --upgradable' to see them.
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo apt -y install dbeaver-ce
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+
+No apt package "dbeaver-ce", but there is a snap with that name.
+Try "snap install dbeaver-ce"
+
+E: Unable to locate package dbeaver-ce
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ snap install dbeaver-ce
+error: cannot perform the following tasks:
+- Download snap "dbeaver-ce" (185) from channel "stable" (unexpected EOF)
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ snap install dbeaver-ce
+dbeaver-ce 22.0.5.202205220912 from DBeaver (dbeaver-corp) installed

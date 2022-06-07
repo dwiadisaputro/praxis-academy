@@ -4,9 +4,9 @@ import json
 from bson.objectid import ObjectId
 app = Flask(__name__)
 
-@app.route("/")
-def route_pustaka():
-    return render_template('awal.html')
+# @app.route("/")
+# def route_pustaka():
+#     return render_template('awal.html')
 
 ###########################
 ##--connect to database
@@ -24,15 +24,16 @@ except:
 ###########################
 ##--buat database kepustakaan
 ###########################
-@app.route("/pustaka", methods=["POST"])
+@app.route("/daftar", methods=["POST"])
 def creat_user():
     try:
-        user = {'judul': request.form["judul"],
-                'pengarang': request.form["pengarang"],
-                'penerbit': request.form["penerbit"],
-                'jenis': request.form["jenis"],
-                'ketebalan': request.form["ketebalan"]}
-        dbResponse = db.buku.insert_one(user)
+        pyload = json.loads(request.data)
+        # user = {'judul': request.form["judul"],
+                # 'pengarang': request.form["pengarang"],
+                # 'penerbit': request.form["penerbit"],
+                # 'jenis': request.form["jenis"],
+                # 'ketebalan': request.form["ketebalan"]}
+        dbResponse = db.buku.insert_one(pyload)
         print(dbResponse.inserted_id)
         return Response(
             response=json.dumps(
@@ -58,12 +59,16 @@ def get_some_pustaka():
 ###########################
 ##--memperbarui database
 ###########################
-@app.route("/pustaka/<id>", methods=["PATCH"])
+@app.route("/terbaru/<id>", methods=["PATCH"])
 def update_user(id):
     try:
         dbResponse=db.buku.update_one(
             {"_id": ObjectId(id)},
-            {"$set":{"judul":request.form["judul"]}})
+            {"$set":{"Judul":request.form["Judul"]}},
+            {"$set":{"Pengarang":request.form["Pengarang"]}},
+            {"$set":{"tahunTerbit":request.form["tahunTerbit"]}},
+            {"$set":{"jenisBuku":request.form["jenisBuku"]}},
+            {"$set":{"Ketebalan":request.form["Ketebalan"]}},)
         if dbResponse.modified_count ==1:
             return Response(
                 response=json.dumps({"message":"telah diperbarui"}),
@@ -78,7 +83,7 @@ def update_user(id):
 ###########################
 ##--hapus data
 ###########################
-@app.route("/pustaka/<id>", methods=["DELETE"])
+@app.route("/hapus/<id>", methods=["DELETE"])
 def delete_user(id):
     try:
         dbResponse=db.buku.delete_one({"_id":ObjectId(id)})
