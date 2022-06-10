@@ -1,0 +1,24 @@
+####mengaktifkan postgress :
+
+sudo systemctl status postgresql (digunakan untuk mengecek status postgresql)
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo systemctl status postgresql
+[sudo] password for blk: 
+● postgresql.service - PostgreSQL RDBMS
+     Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor pr>
+     Active: active (exited) since Thu 2022-06-09 21:02:19 WIB; 6h left
+    Process: 1213 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 1213 (code=exited, status=0/SUCCESS)
+
+Jun 09 21:02:19 blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx systemd[1]: Starting Po>
+Jun 09 21:02:19 blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx systemd[1]: Finished Po>
+
+#### masuk ke sistem postgresql:
+sudo -i -u postgres
+
+blk@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ sudo -i -u postgres
+postgres@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ psql
+psql (14.3 (Ubuntu 14.3-1.pgdg20.04+1))
+Type "help" for help.
+
+postgres=#
+
