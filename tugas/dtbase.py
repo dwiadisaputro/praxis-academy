@@ -4,9 +4,9 @@ import json
 from bson.objectid import ObjectId
 app = Flask(__name__)
 
-# @app.route("/")
-# def route_pustaka():
-#     return render_template('awal.html')
+@app.route("/")
+def route_pustaka():
+    return render_template('awal.html')
 
 ###########################
 ##--connect to database
