@@ -20,5 +20,5 @@ postgres@blk-HP-Pavilion-Gaming-Laptop-15-dk1xxx:~$ psql
 psql (14.3 (Ubuntu 14.3-1.pgdg20.04+1))
 Type "help" for help.
 
-postgres=#
+postgres=# psql -h 
 
