@@ -31,6 +31,7 @@ def list():
         })
     except Exception as e:
         print(e)
+        
 
 @app.route("/add", methods=["POST"])
 def add():
@@ -48,6 +49,8 @@ def add():
         print(query)
         curs.execute(query)
         conn.commit()
+        curs.close()
+        conn.close()
         return jsonify({
             "message": "tambah data berhasil"
         })
