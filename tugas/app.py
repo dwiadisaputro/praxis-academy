@@ -1,12 +1,16 @@
 from flask import Flask, jsonify, request, json
 import psycopg2
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
+
+
 
 conn = psycopg2.connect(host="0.0.0.0", database="web", user="dwi", password="blkk57")
 curs = conn.cursor()
 
-@app.route("/list", methods=["GET"])
+@app.route("/baca", methods=["GET"])
 def list():
     try:
         query = f"select * from daftar"
@@ -75,7 +79,7 @@ def delete(id):
             "detailMessage":f"{e}"
         }), 400
 
-@app.route("/ubah/<id>", methods=["PATCH"])
+@app.route("/ubah/<id>", methods=["PUT"])
 def ubah(id):
     try:
         payload = json.loads(request.data)
