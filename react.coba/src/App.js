@@ -47,7 +47,7 @@
 import './App.css';
 import Login from './Component/Login';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-// import Registrasion from './Component/Registrasion';
+import Registrasion from './Component/Registrasion';
 import Lupasandi from './Component/Lupasandi';
 // import Home from './Component/Home';
 
@@ -61,7 +61,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Login/>} />
-          {/* <Route path='/registrasion' element={<Registrasion/>} /> */}
+          <Route path='/registrasion' element={<Registrasion/>} />
           <Route path='/lupasandi' element={<Lupasandi/>} />
           {/* <Route path='/home' element={<Home/>} /> */}
         </Routes>

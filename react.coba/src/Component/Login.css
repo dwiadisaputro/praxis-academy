@@ -1,0 +1,24 @@
+.login {
+    background-color: tomato;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    height: 30%;
+    width: 400px;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ard {
+    height: 30%;
+    width: 20rem;
+    justify-items: center;
+    background-color: white;
+    text-align: center;
+}

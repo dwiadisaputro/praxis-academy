@@ -1,6 +1,6 @@
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input, Card } from 'antd';
-import React from 'react';
+import "./Login.css"
 
 const Login = () => {
   const onFinish = (values) => {
@@ -8,11 +8,10 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-primary">
-        <Card
-        style={{width: 300, height: 250}}
-        >
-        <Form className='card' name="normal_login" initialValues={{
+    <div className='login'>
+        {/* <Card style={{width: "400px", height: "300px", justifyContent:"center"}}> */}
+        <Card className='card'>
+        <Form className='ard' name="normal_login" initialValues={{
             remember: true,
         }} onFinish={onFinish} >
 
@@ -50,8 +49,8 @@ const Login = () => {
         <Form.Item>
             <Button type="primary" htmlType="submit" className="login-form-button">
             Log in
-            </Button>
-            Or <a href="/registrasion">register now!</a>
+            </Button> &nbsp;
+            Or &nbsp; <a href="/registrasion">register now!</a>
         </Form.Item>
         </Form>
         </Card>
