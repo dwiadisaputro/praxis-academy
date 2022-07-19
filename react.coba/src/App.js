@@ -45,13 +45,28 @@
 
 // import logo from './logo.svg';
 import './App.css';
+import Login from './Component/Login';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+// import Registrasion from './Component/Registrasion';
+import Lupasandi from './Component/Lupasandi';
+// import Home from './Component/Home';
 
-import { Home } from './pages/Home';
+// import { Home } from './pages/Home';
+
+// import Registrasion from './pages/Registrasion';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Router>
+        <Routes>
+          <Route path='/' element={<Login/>} />
+          {/* <Route path='/registrasion' element={<Registrasion/>} /> */}
+          <Route path='/lupasandi' element={<Lupasandi/>} />
+          {/* <Route path='/home' element={<Home/>} /> */}
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
