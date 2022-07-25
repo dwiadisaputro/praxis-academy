@@ -1,13 +1,14 @@
 from flask import Flask, jsonify, json, request
-import psycopg2
-from flask_cors import CORS
+import psycopg2, os
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/read/*": {"origin": "*"}})
 
 
 conn = psycopg2.connect(host="0.0.0.0", database="project", user="project", password="blkk57")
 curs = conn.cursor()
+
 
 
 ##-------database form----##
@@ -114,7 +115,8 @@ def hapus(id):
 
 ##-----akun---##
 @app.route("/read", methods=["GET"])
-def read():
+# @cross_origin(allow_headers=['Content-Type'])
+def cross_origin_json_get():
     try:
         query = f"select * from akun"
         curs.execute(query)
@@ -125,8 +127,7 @@ def read():
                 "akun_id": i[0],
                 "username": i[1],
                 "password": i[2]
-            }), [('Content-Type', 'application/json'), ('Access-Control-Allow-Origin', '*'), 
-                 ('Access-Control-Allow-Headers', 'Authorization, Content-Type'), ('Access-Control-Allow-Methods', 'GET'),]
+            })
         return jsonify({
             "data": data
         })
@@ -186,5 +187,6 @@ def delete(id):
             "erroe": f"{e}"
         }), 400
 
+
 if "__name__"=="__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(debug=True)
