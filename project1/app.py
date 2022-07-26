@@ -115,7 +115,7 @@ def hapus(id):
 
 ##-----akun---##
 @app.route("/read", methods=["GET"])
-# @cross_origin(allow_headers=['Content-Type'])
+@cross_origin(allow_headers=['Content-Type'])
 def cross_origin_json_get():
     try:
         query = f"select * from akun"
