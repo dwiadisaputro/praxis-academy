@@ -1,3 +1,5 @@
+from cmath import e
+from http.client import responses
 from flask import Flask, jsonify, json, request
 import psycopg2
 
@@ -44,6 +46,23 @@ def upload():
         return jsonify({
             "message": "gagal memasukkan data",
             "error": f"{i}"
+        }), 400
+
+###------login----###
+@app.route("/login", methods=["GET"])
+def login():
+    try:
+        payload = json.loads(request.data)
+        query = f"select a.akun_id, a.username, a.password from form where a.username = '{payload['username']}' and a.password = '{payload['password']}'"
+        curs.execute(query)
+        conn.commit()
+        return jsonify({
+            "message": "Berhasil Masuk"
+        }), 200
+    except Exception as e:
+        return jsonify({
+            "message": "gagal membaca",
+            "error": f"{e}"
         }), 400
 
 
