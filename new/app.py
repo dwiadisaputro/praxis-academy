@@ -1,5 +1,4 @@
-from cmath import e
-from http.client import responses
+from unittest import result
 from flask import Flask, jsonify, json, request
 import psycopg2
 
@@ -49,21 +48,47 @@ def upload():
         }), 400
 
 ###------login----###
-@app.route("/login", methods=["GET"])
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    try:
-        payload = json.loads(request.data)
-        query = f"select a.akun_id, a.username, a.password from form where a.username = '{payload['username']}' and a.password = '{payload['password']}'"
-        curs.execute(query)
-        conn.commit()
-        return jsonify({
-            "message": "Berhasil Masuk"
-        }), 200
-    except Exception as e:
-        return jsonify({
-            "message": "gagal membaca",
-            "error": f"{e}"
-        }), 400
+    username = request.form["username"]
+    password = request.form["password"]
+    query = "select username, password from register where username = '{username}' and password = '{password}'", format(username = username, password = password)
+    curs.execute(query)
+    result = curs.fetchone()
+    
+    if (result) ==1:
+        print("berhasil login")
+    #     return jsonify({
+    #         "message": "berhasil"
+    #     })
+    # else:
+    #     return jsonify({
+    #         "message": "gagal"
+    #     })
+    # try:
+    #     payload = json.loads(request.data)
+    #     username = payload["username"]
+    #     password = payload["password"]
+    #     query = f"select * from akun where (username, password) values ('{username}', '{password}')"
+    #     curs.execute(query)
+    #     conn.commit()
+    #     return jsonify({
+    #         "message": "berhasil memasukkan data baru",
+    #         "data": "register"
+    #     }), 200
+        
+        # payload = json.loads(request.data)
+        # query = f"select a.username, a.password from akun where a.username = '{payload['username']}' and a.password = '{payload[_PasswordType]}'"
+        # curs.execute(query)
+        # conn.commit()
+        # return jsonify({
+        #     "message": "Berhasil Masuk"
+        # }), 200
+    # except Exception as e:
+    #     return jsonify({
+    #         "message": "gagal membaca",
+    #         "error": f"{e}"
+    #     }), 400
 
 
 if "__name__"=="__main__":
