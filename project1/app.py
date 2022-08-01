@@ -113,6 +113,8 @@ def hapus(id):
 
 
 
+
+
 ##-----akun---##
 @app.route("/read", methods=["GET"])
 @cross_origin(allow_headers=['Content-Type'])
@@ -186,6 +188,11 @@ def delete(id):
             "message": "data gagal terhapus",
             "erroe": f"{e}"
         }), 400
+
+
+@app.route("/login", method)
+
+
 
 
 if "__name__"=="__main__":
