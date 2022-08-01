@@ -190,8 +190,6 @@ def delete(id):
         }), 400
 
 
-@app.route("/login", method)
-
 
 
 
