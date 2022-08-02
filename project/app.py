@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, json, request
 import psycopg2
+import java.util.regex.Pattern.compile
 # from flask_cors import CORS
 
 
@@ -41,6 +42,26 @@ def list():
         })
     except Exception as e:
         print(e)
+        
+fun main() {
+    val myEmail = "abc.de@mail.com"
+    val otherEmail = "abc.com"
+    val emailRegex = compile(
+        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+"
+    )
+
+    val isMyEmailValid = emailRegex.matcher(myEmail).matches()
+    val isOtherEmailValid = emailRegex.matcher(otherEmail).matches()
+
+    println("Email $myEmail is $isMyEmailValid")
+    println("Email $otherEmail is $isOtherEmailValid")
+}
 
 # =================================
 # @app.route("/read1", methods=["GET"])
