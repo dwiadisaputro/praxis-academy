@@ -1,0 +1,57 @@
+from flask import Flask, jsonify, request, make_response, json
+import jwt
+import datetime
+from functools import wraps
+
+import psycopg2
+
+conn = psycopg2.connect(host="0.0.0.0", database="project", user="project", password="blkk57")
+curs = conn.cursor()
+
+
+app = Flask(__name__)
+
+app.config['SECRET_KEY'] = 'kunci'
+
+def token_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.args.get('token')
+        
+        if not token:
+            return jsonify({'message': 'Token is missing!'}), 403
+        
+        
+        try: 
+            data = jwt.decode(token, app.config['SECRET_KEY'])
+            
+        except:
+            return jsonify({'message' : 'Token is invalid!'}), 403
+        
+        return f(*args, **kwargs)
+    
+    return decorated
+
+@app.route('/unprotected')
+def unprotected():
+    return jsonify({'message': 'Anyone can view this!'})
+
+@app.route('/protected')
+@token_required
+def protected():
+    return jsonify({'message': 'This in only avaible for people with valid tokens.'})
+
+@app.route('/login', methods=["GE", "POST"])
+def login():
+    auth = request.authorization
+    
+        
+    if auth and auth.password == 'secret':
+        token = jwt.encode({'user': auth.username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=15)}, app.config['SECRET_KEY'])
+        
+        return jsonify({'token' : token.decode("utf-8")})
+    
+    return make_response('Could not verify!', 401, {'www-Authenticate' : 'Basic realm="Login Required"'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
